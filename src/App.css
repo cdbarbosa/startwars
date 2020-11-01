@@ -71,7 +71,7 @@
 
 .spaceships-container .spaceship-card .card-header {
     padding: 0;
-    height: 100px;
+    height: 150px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,4 +92,8 @@
 
 .spaceships-container::-webkit-scrollbar-thumb {
     background-color: #FFE81F;
+}
+
+.loading-component {
+    padding: 2rem 0;
 }

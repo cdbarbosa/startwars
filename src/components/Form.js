@@ -19,7 +19,7 @@ export const Form = () => {
         <div className="content-form d-flex flex-column justify-content-center align-items-center">
             <p className="w-75 text-center">Digite o valor de uma distância em mega lights e descubra a quantidade de paradas que as naves de Star Wars precisariam fazer para concluir essa distância</p>
             <div className="component-form">
-                <input className="form-control" type="number" min="1" placeholder="text here" name="value_distance" onInput={e => handleInputChange(e)}/>
+                <input className="form-control" type="number" min="1" placeholder="Entre com a distância em MGLT. Ex.: 100000" name="value_distance" onInput={e => handleInputChange(e)}/>
                 <button className="btn btn-calculate" onClick={() => submit()}>calcular</button>
             </div>
         </div>
