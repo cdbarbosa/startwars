@@ -1,10 +1,12 @@
 import React, { useState }  from 'react'
 import { useDispatch } from 'react-redux'
 import { Creators as SpaceshipsActions } from '../store/ducks/spaceships'
+import { useToasts } from 'react-toast-notifications'
 
 export const Form = () => {
     const [value, setValue] = useState(0)
     const dispatch = useDispatch()
+    const { addToast } = useToasts()
 
     const handleInputChange = (e) => {
         const { value } = e.target
@@ -12,6 +14,10 @@ export const Form = () => {
     }
 
     const submit = () => {
+        if (value === 0 || value === '') {
+            addToast('Você não pode submeter um formulário vazio', { appearance: 'error' })
+            return
+        }
         dispatch(SpaceshipsActions.countSpaceships(value))
     }
    

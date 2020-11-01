@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux'
 import { Creators as SpaceshipActions } from '../../store/ducks/spaceships'
 import { api } from '../../services/starwarsApi'
 
+import { ToastProvider } from 'react-toast-notifications'
+
 import Starwars from '../../assets/img/starwars.svg'
 import Ship from '../../assets/img/ship.svg'
 
@@ -39,7 +41,9 @@ export const Home = () => {
                 </div>
             </div>
             <div className="component-body">
-                <Form />
+                <ToastProvider placement="bottom-right" autoDismiss={true}>
+                    <Form />
+                </ToastProvider>
                 <Spaceships />
             </div>
         </div>
