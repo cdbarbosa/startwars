@@ -27,8 +27,12 @@ const get = (state = INITIAL_STATE, action) => action.spaceship
 const count = (state = INITIAL_STATE, action) => {
     state.forEach((item) => {
         let days = handleReturnDays(item.consumables)
-        let consum = action.value / (24 * Number(days) * Number(item.MGLT))
+        let consum = ''
+        if (item.MGLT !== 'unknown') {
+            consum = action.value / (24 * Number(days) * Number(item.MGLT))
+        }
         item.stops = Math.round(consum)
+        item.distance = Number(action.value)
     })
 
     return [...state]

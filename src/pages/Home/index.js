@@ -5,6 +5,9 @@ import { useDispatch } from 'react-redux'
 import { Creators as SpaceshipActions } from '../../store/ducks/spaceships'
 import { api } from '../../services/starwarsApi'
 
+import Starwars from '../../assets/img/starwars.svg'
+import Ship from '../../assets/img/ship.svg'
+
 export const Home = () => {
     const dispatch = useDispatch()
     const object = []
@@ -28,10 +31,17 @@ export const Home = () => {
         handleFunction('https://swapi.dev/api/starships')
     })
     return (
-        <div>
-            <h3>Home</h3>
-            <Form />
-            <Spaceships />
+        <div className="content">
+            <div className="component-header">
+                <img src={Starwars} alt="star wars"/>
+                <div className="component-header__icon">
+                    <img src={Ship} alt="spaceship"/>
+                </div>
+            </div>
+            <div className="component-body">
+                <Form />
+                <Spaceships />
+            </div>
         </div>
     )
 }

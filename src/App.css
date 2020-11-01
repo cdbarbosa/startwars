@@ -1,0 +1,95 @@
+.component-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.component-header > img {
+    width: 500px;
+    position: absolute;
+    top: 45px;
+    z-index: 99;
+}
+
+.component-header__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.component-header__icon > img {
+    width: 200px;
+    opacity: .5;
+}
+
+.component-body {
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.component-body .component-form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-self: center;
+}
+
+.component-form input {
+    border-radius: 0;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.component-form .btn-calculate {
+    background-color: #FFE81F;
+    color: #2F2A2A;
+    border-radius: 0;
+    width: 100px;
+}
+
+.content-form > p {
+    color: rgba(165, 165, 165, .96);
+}
+
+.spaceships-container {
+    margin-top: 20px;
+    padding: 1rem;
+    max-height: 60vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.spaceships-container .spaceship-card {
+    padding: 0;
+    border-radius: 0;
+}
+
+.spaceships-container .spaceship-card .card-header {
+    padding: 0;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0;
+}
+
+.spaceships-container .spaceship-card .card-body {
+    color: #7B6F08;
+}
+
+.spaceships-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.spaceships-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.spaceships-container::-webkit-scrollbar-thumb {
+    background-color: #FFE81F;
+}

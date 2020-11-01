@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Staatliches';
+  src: url('./assets/font/Staatliches-Regular.ttf');
+}
+
 html, body, #root {
   margin: 0;
   padding: 0;
   box-sizing: content-box;
+  background-color: #2F2A2A;
+  font-family: Staatliches;
 }
