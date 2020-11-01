@@ -11,14 +11,16 @@ export const Spaceships = () => {
             <div className="row">
                 {spaceships.map((spaceship) => (
                     spaceship.MGLT !== 'unknown' ? (
-                        <Card key={spaceship.name} className="col-sm-12 col-md-4 col-lg-2 m-3 ">
+                        <Card key={spaceship.name} className="col-sm-12 col-md-4 col-lg-3 m-3 ">
                             <Card.Header></Card.Header>
-                            <textarea value={JSON.stringify(spaceship, null, 4)} style={{ height: '50vh'}}></textarea>
+                            {/* <textarea value={JSON.stringify(spaceship, null, 4)} style={{ height: '50vh'}}></textarea> */}
                             <Card.Body>
-                                {/* <h4>{spaceship.name}</h4>
+                                <h4>{spaceship.name}</h4>
                                 <p>MGLT: {spaceship.MGLT}</p>
-                                <p>size: {spaceship.length}</p>
-                                <p>max_atmosphering_speed: {spaceship.max_atmosphering_speed}</p> */}
+                                <p>consumables: {spaceship.consumables}</p>
+                                <p>Stops: {spaceship.stops}</p>
+                                {/* {spaceship.stops ? (
+                                ) : ''} */}
                             </Card.Body>
                         </Card>
                     ) : ""
