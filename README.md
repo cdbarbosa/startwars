@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Star Wars Ships - Calculando a distância
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![alt Screenshot 1]('../../src/assets/img/screenshot.png)
 
-## Available Scripts
+## Desafio
 
-In the project directory, you can run:
+Utilizando a API Star Wars disponível em [https://swapi.dev/](https://swapi.dev/), o aplicativo deve retornar, para uma determinada distância inserida pelo usuário em megaluzes (MGLT), quantas paradas cada espaçonave precisa fazer para completar uma viagem.
 
-### `yarn start`
+## O projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O projeto foi realizado com o React JS em conjunto com as bibliotecas:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* `redux`
+* `redux sauce`
+* `Bootstrap`
+* `React Toast Notification`
+* `React Spinner`
 
-### `yarn test`
+A API Star Wars foi utilizada para recolher informações das espaçonaves presentes nos filmes de Star Wars.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Inicializando o projeto
 
-### `yarn build`
+------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para rodar o projeto é necessário realizar alguns passos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone o projeto `git clone https://github.com/cdbarbosa/startwars`
+2. `yarn install` ou `npm install` para instalar os pacotes necessários
+3. `yarn start` ou `npm start` para iniciar o projeto. O projeto irá iniciar em [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Considerações finais
 
-### `yarn eject`
+------
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Nessa aplicação foi utilizado o Redux para centralizar os dados, mesmo que simples, do sistema, com o intuito de diminuir a quantidade de requisções para a API. A utilização desse biblioteca foi baseado no modelo *Duck Pattern*, centralizando as ações e estados responsáveis àquele tipo de informação, nesse caso, as informações relacionadas às espaçonaveis.
+Apesar de contemplar o pedido proposto pelo desafio, ainda há itens que podem ser implementados para uma melhor performance da aplicação, como Teste unitários E2E (*End to End*) e algumas animações para melhor entreterimento do usuário.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Implementações Futuras
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+------
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Teste Unitário E2E utilizando cypress
